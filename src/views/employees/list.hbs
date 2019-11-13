@@ -1,0 +1,33 @@
+<div class="container p-4">
+    <div class="row">
+        {{#each employees}}
+
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <a href="{{nombres}}">
+                        <h3 class="card-title text-uppercase">
+                            {{nombres}}
+
+                        </h3>
+                    </a>
+                    <p> {{departamento}}</p>
+                    <p> {{timeago fechaInicio}}</p>
+                    <p> {{idUsuario}}</p>
+
+
+                    <a href="/employees/delete/{{idUsuario}}" class="btn btn-danger">Eliminar</a>
+                    <a href="/employees/edit/{{idUsuario}}" class="btn btn-secondary">Editar</a>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+
+
+        {{/each}}
+
+    </div>
+</div>
